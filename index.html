@@ -4,275 +4,563 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meetii Kalher Exclusive OnlyFans Content</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    /* Global Styles */
+    :root {
+      --bg: #07060a;
+      --bg-soft: #0f0d14;
+      --gold: #e9c46a;
+      --gold-light: #f4e4a6;
+      --gold-deep: #b8860b;
+      --rose: #e84393;
+      --text: #f5f3f7;
+      --text-dim: #a9a3b5;
+      --glass: rgba(255,255,255,0.04);
+      --glass-border: rgba(233,196,106,0.18);
+      --radius: 18px;
+      --shadow-gold: 0 8px 40px rgba(233,196,106,0.15);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #2c3e50;
-      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
+    /* Animated aurora background */
+    .aurora {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .aurora::before, .aurora::after {
+      content: "";
+      position: absolute;
+      width: 60vw;
+      height: 60vw;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+      animation: float 16s ease-in-out infinite;
+    }
+    .aurora::before {
+      background: radial-gradient(circle, rgba(233,196,106,0.5), transparent 70%);
+      top: -10%;
+      left: -10%;
+    }
+    .aurora::after {
+      background: radial-gradient(circle, rgba(232,67,147,0.35), transparent 70%);
+      bottom: -15%;
+      right: -10%;
+      animation-delay: -8s;
+    }
+    @keyframes float {
+      0%, 100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(6%, 4%) scale(1.15); }
+    }
+
+    /* Subtle grain overlay */
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Header */
     header {
-      background-color: #34495e;
-      color: #ecf0f1;
-      text-align: center;
-      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 1.1rem 1.5rem;
+      background: rgba(7,6,10,0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(233,196,106,0.12);
     }
-
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+    }
+    .logo .crest {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color: #1a1408;
+      font-size: 1.05rem;
+      box-shadow: 0 0 20px rgba(233,196,106,0.4);
+    }
+    .logo span {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     main {
-      padding: 2rem;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.2rem 1.3rem 4rem;
     }
 
-    section {
-      margin-bottom: 2rem;
-    }
-
-    /* Video Section */
-    .video-section {
+    /* Hero */
+    .hero {
       text-align: center;
+      padding: 2.5rem 0 1.5rem;
+    }
+    .hero .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--glass-border);
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: blur(8px);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1.12;
+      margin: 1.2rem 0 0;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--rose));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-style: italic;
+    }
+    .hero .sub {
+      color: var(--text-dim);
+      max-width: 540px;
+      margin: 1.1rem auto 0;
+      font-size: 1rem;
     }
 
-    .video-section video {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 1rem;
+    /* Section heading */
+    .section-head {
+      text-align: center;
+      margin: 2.8rem 0 1.6rem;
+    }
+    .section-head h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+      margin: 0;
+    }
+    .section-head .line {
+      width: 60px;
+      height: 2px;
+      margin: 0.7rem auto 0;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
 
-    .video-section p {
-      font-size: 1.2rem;
-      color: #7f8c8d;
+    /* Video */
+    .video-frame {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-gold);
+      background: #000;
     }
-
-    /* Gallery Section */
-    .gallery-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .gallery-section img {
+    .video-frame video {
+      display: block;
       width: 100%;
       height: auto;
-      border-radius: 10px;
     }
-
-    .support h2 {
-      color: #e74c3c;
+    .video-caption {
       text-align: center;
+      color: var(--text-dim);
+      margin-top: 0.9rem;
+      font-size: 0.98rem;
     }
 
-    .support ul {
-      list-style: square;
-      margin: 1rem auto;
-      max-width: 600px;
-      padding-left: 1.5rem;
-      color: #7f8c8d;
-    }
-
-    /* Button Styles */
-    .buttons {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .buttons h2 {
-      color: #e74c3c;
-      margin-bottom: 1.5rem;
-    }
-
-    .button-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1rem;
     }
+    .gallery .tile {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      aspect-ratio: 3/4;
+      cursor: pointer;
+    }
+    .gallery .tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.2,0.8,0.2,1), filter 0.5s ease;
+      filter: saturate(0.95) brightness(0.92);
+    }
+    .gallery .tile:hover img {
+      transform: scale(1.08);
+      filter: saturate(1.08) brightness(1);
+    }
+    .gallery .tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7,6,10,0.55), transparent 55%);
+      pointer-events: none;
+    }
 
+    /* Support list */
+    .support-list {
+      list-style: none;
+      margin: 0 auto;
+      max-width: 560px;
+      padding: 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+    .support-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 1.1rem;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+      color: var(--text-dim);
+      transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+    .support-list li:hover {
+      transform: translateX(6px);
+      border-color: var(--glass-border);
+      color: var(--text);
+    }
+    .support-list li .ico {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(233,196,106,0.2), rgba(232,67,147,0.15));
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+
+    /* Premium buttons */
+    .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
     .btn {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      color: white;
-      background-color: #3498db;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 1.3rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: var(--text);
       text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      backdrop-filter: blur(10px);
+      transition: transform 0.35s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.35s ease, border-color 0.35s ease;
+      will-change: transform;
     }
-
+    .btn .ico {
+      font-size: 1rem;
+      transition: transform 0.35s ease;
+    }
+    /* shimmer sweep */
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,0.22), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.6s ease;
+    }
     .btn:hover {
-      background-color: #2980b9;
+      transform: translateY(-4px);
+      border-color: rgba(233,196,106,0.5);
     }
+    .btn:hover::before { left: 140%; }
+    .btn:hover .ico { transform: scale(1.15) rotate(-4deg); }
 
     .btn.download-pictures {
-      background-color: #1abc9c;
+      background: linear-gradient(135deg, rgba(26,188,156,0.18), rgba(22,160,133,0.08));
+      border-color: rgba(26,188,156,0.4);
     }
-
-    .btn.download-pictures:hover {
-      background-color: #16a085;
-    }
-
+    .btn.download-pictures:hover { box-shadow: 0 10px 30px rgba(26,188,156,0.25); }
     .btn.download-videos {
-      background-color: #e74c3c;
+      background: linear-gradient(135deg, rgba(233,196,106,0.18), rgba(184,134,11,0.1));
+      border-color: rgba(233,196,106,0.4);
     }
-
-    .btn.download-videos:hover {
-      background-color: #c0392b;
-    }
-
+    .btn.download-videos:hover { box-shadow: 0 10px 30px rgba(233,196,106,0.25); }
     .btn.access-pictures {
-      background-color: #9b59b6;
+      background: linear-gradient(135deg, rgba(155,89,182,0.18), rgba(142,68,173,0.08));
+      border-color: rgba(155,89,182,0.4);
     }
-
-    .btn.access-pictures:hover {
-      background-color: #8e44ad;
-    }
-
+    .btn.access-pictures:hover { box-shadow: 0 10px 30px rgba(155,89,182,0.25); }
     .btn.access-videos {
-      background-color: #f39c12;
+      background: linear-gradient(135deg, rgba(243,156,18,0.18), rgba(230,126,34,0.08));
+      border-color: rgba(243,156,18,0.4);
     }
+    .btn.access-videos:hover { box-shadow: 0 10px 30px rgba(243,156,18,0.25); }
 
-    .btn.access-videos:hover {
-      background-color: #e67e22;
-    }
-
-    .final-thoughts {
+    /* Final thoughts */
+    .final {
       text-align: center;
-      margin-top: 2rem;
+      max-width: 620px;
+      margin: 3rem auto 0;
+      padding: 2.2rem 1.5rem;
+      border-radius: var(--radius);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px);
     }
-
-    .final-thoughts h2 {
-      color: #e74c3c;
+    .final h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      margin: 0 0 0.8rem;
+      background: linear-gradient(90deg, var(--gold-light), var(--rose));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
+    .final p { color: var(--text-dim); margin: 0; }
 
-    .final-thoughts p {
-      font-size: 1.1rem;
-      color: #7f8c8d;
-    }
-
+    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem 0;
-      background-color: #34495e;
-      color: #ecf0f1;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid rgba(233,196,106,0.1);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+    footer .divider {
+      width: 40px;
+      height: 1px;
+      margin: 0 auto 1rem;
+      background: var(--glass-border);
     }
 
-    /* Scroll Button Styles */
-    .scroll-button {
+    /* Scroll button */
+    .scroll-btn {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
-      padding: 10px 20px;
-      background-color: #e74c3c;
-      color: white;
-      border: none;
-      border-radius: 5px;
+      right: 18px;
+      bottom: 18px;
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--glass-border);
+      border-radius: 50%;
+      background: rgba(7,6,10,0.7);
+      backdrop-filter: blur(12px);
+      color: var(--gold);
       cursor: pointer;
-      display: none;
-      z-index: 1000;
-      font-size: 1.5rem;
-    }
-
-    .scroll-button.show {
-      display: block;
-    }
-
-    .scroll-button i {
+      font-size: 1.1rem;
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
       pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+      z-index: 200;
+    }
+    .scroll-btn.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+    .scroll-btn:hover { box-shadow: 0 0 24px rgba(233,196,106,0.4); }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2,0.8,0.2,1);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal.d1 { transition-delay: 0.08s; }
+    .reveal.d2 { transition-delay: 0.16s; }
+    .reveal.d3 { transition-delay: 0.24s; }
+    .reveal.d4 { transition-delay: 0.32s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+      .aurora::before, .aurora::after { animation: none; }
     }
   </style>
 </head>
 <body>
+  <div class="aurora"></div>
+  <div class="grain"></div>
+
   <header>
-    <h1>Exclusive Access to Meetii Kalher's OnlyFans Content</h1>
+    <div class="logo">
+      <div class="crest"><i class="fas fa-star"></i></div>
+      <span>Meetii Kalher Exclusive</span>
+    </div>
   </header>
 
   <main>
-    <!-- Video Sections -->
-    <section id="video-section" class="video-section">
-      <video src="Meetii Kalher.mp4" controls>
-      </video>
-      <p>Discover Meetii Kalher's stunning presence in this exclusive video. (Mesmerizing)</p>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="eyebrow reveal"><i class="fas fa-gem"></i> Exclusive Access</div>
+      <h1 class="reveal d1">Exclusive Access to <span class="accent">Meetii Kalher's</span> OnlyFans Content</h1>
+      <p class="sub reveal d2">Step into a curated, intimate experience — exclusive videos, artistic photography, and premium content crafted for true fans.</p>
     </section>
 
-    <!-- Image Grid -->
-    <section id="gallery-section" class="gallery-section">
-      <img src="Meetii Kalher Demo 1.jpeg" alt="Meetii Kalher Image 1">
-      <img src="Meetii Kalher Demo 2.jpeg" alt="Meetii Kalher Image 2">
-      <img src="Meetii Kalher Demo 3.jpg" alt="Meetii Kalher Image 3">
+    <!-- Video -->
+    <section id="video-section">
+      <div class="section-head reveal">
+        <h2>Featured Video</h2>
+        <div class="line"></div>
+      </div>
+      <div class="video-frame reveal d1">
+        <video src="Meetii Kalher.mp4" controls preload="metadata"></video>
+      </div>
+      <p class="video-caption reveal d2">Discover Meetii Kalher's stunning presence in this exclusive video. (Mesmerizing)</p>
     </section>
 
-    <!-- Why Support Section -->
-    <section class="support">
-      <h2>Reasons to Support Meetii Kalher</h2>
-      <ul>
-        <li>Exclusive behind-the-scenes content</li>
-        <li>Artistic and intimate photography</li>
-        <li>Personalized fan interactions</li>
-        <li>Support independent artistry</li>
-        <li>Join a growing fan community</li>
-      </ul>
-    </section>
-
-    <!-- Download Buttons -->
-    <section id="button-section" class="buttons">
-      <h2>Access Meetii Kalher's Premium Content</h2>
-      <div class="button-container">
-        <a href="https://drive.google.com/drive/folders/1-BqnjOM2k0mD7ze_3pg1Iih71qV4GTp3" class="btn download-pictures">Download Pictures <i class="fas fa-download"></i></a>
-        <a href="https://drive.google.com/drive/folders/1-Byk-qOEXmQkFxys84xsb9xAztCQiZ0Y" class="btn download-videos">Download Videos <i class="fas fa-download"></i></a>
-        <a href="https://drive.google.com/file/d/1UTZdX0wBZOMC1GaG0mGQkQDWnAd40NAX/view?usp=drivesdk" class="btn download-videos">Download Pictures & Video Archive <i class="fas fa-file-archive"></i></a>
-        <a href="https://mega.nz/folder/4tRwCbiR#tesGos_lBQYgzG45zJqN5g" class="btn download-videos">Mega Download Pictures & Video Archive <i class="fas fa-file-archive"></i></a>
-        <a href="https://photos.app.goo.gl/58Uhkd1dQih1nBbq7" class="btn access-pictures">View Pictures <i class="fas fa-images"></i></a>
-        <a href="https://photos.app.goo.gl/FpSkcoLHXuPkYdiD9" class="btn access-videos">View Videos <i class="fas fa-video"></i></a>
+    <!-- Gallery -->
+    <section id="gallery-section">
+      <div class="section-head reveal">
+        <h2>Gallery</h2>
+        <div class="line"></div>
+      </div>
+      <div class="gallery">
+        <div class="tile reveal d1"><img src="Meetii Kalher Demo 1.jpeg" alt="Meetii Kalher Image 1" loading="lazy"></div>
+        <div class="tile reveal d2"><img src="Meetii Kalher Demo 2.jpeg" alt="Meetii Kalher Image 2" loading="lazy"></div>
+        <div class="tile reveal d3"><img src="Meetii Kalher Demo 3.jpg" alt="Meetii Kalher Image 3" loading="lazy"></div>
       </div>
     </section>
 
-    <!-- Final Thoughts Section -->
-    <section class="final-thoughts">
+    <!-- Support -->
+    <section class="support">
+      <div class="section-head reveal">
+        <h2>Reasons to Support Meetii Kalher</h2>
+        <div class="line"></div>
+      </div>
+      <ul class="support-list">
+        <li class="reveal d1"><span class="ico"><i class="fas fa-camera-retro"></i></span> Exclusive behind-the-scenes content</li>
+        <li class="reveal d2"><span class="ico"><i class="fas fa-image"></i></span> Artistic and intimate photography</li>
+        <li class="reveal d3"><span class="ico"><i class="fas fa-heart"></i></span> Personalized fan interactions</li>
+        <li class="reveal d4"><span class="ico"><i class="fas fa-palette"></i></span> Support independent artistry</li>
+        <li class="reveal d4"><span class="ico"><i class="fas fa-users"></i></span> Join a growing fan community</li>
+      </ul>
+    </section>
+
+    <!-- Buttons -->
+    <section id="button-section">
+      <div class="section-head reveal">
+        <h2>Access Meetii Kalher's Premium Content</h2>
+        <div class="line"></div>
+      </div>
+      <div class="btn-grid">
+        <a href="https://drive.google.com/drive/folders/1-BqnjOM2k0mD7ze_3pg1Iih71qV4GTp3" class="btn download-pictures reveal d1" target="_blank" rel="noopener">Download Pictures <i class="fas fa-download ico"></i></a>
+        <a href="https://drive.google.com/drive/folders/1-Byk-qOEXmQkFxys84xsb9xAztCQiZ0Y" class="btn download-videos reveal d1" target="_blank" rel="noopener">Download Videos <i class="fas fa-download ico"></i></a>
+        <a href="https://drive.google.com/file/d/1UTZdX0wBZOMC1GaG0mGQkQDWnAd40NAX/view?usp=drivesdk" class="btn download-videos reveal d2" target="_blank" rel="noopener">Download Pictures & Video Archive <i class="fas fa-file-archive ico"></i></a>
+        <a href="https://mega.nz/folder/4tRwCbiR#tesGos_lBQYgzG45zJqN5g" class="btn download-videos reveal d2" target="_blank" rel="noopener">Mega Download Pictures & Video Archive <i class="fas fa-file-archive ico"></i></a>
+        <a href="https://photos.app.goo.gl/58Uhkd1dQih1nBbq7" class="btn access-pictures reveal d3" target="_blank" rel="noopener">View Pictures <i class="fas fa-images ico"></i></a>
+        <a href="https://photos.app.goo.gl/FpSkcoLHXuPkYdiD9" class="btn access-videos reveal d3" target="_blank" rel="noopener">View Videos <i class="fas fa-video ico"></i></a>
+      </div>
+    </section>
+
+    <!-- Final thoughts -->
+    <section class="final reveal">
       <h2>Final Thoughts</h2>
       <p>Join Meetii Kalher's OnlyFans to access exclusive content and support her creative journey. Explore intimate moments, photos, and videos now!</p>
     </section>
   </main>
 
   <footer>
+    <div class="divider"></div>
     <p>&copy; 2024 Meetii Kalher Exclusive. All rights reserved.</p>
   </footer>
 
-  <!-- Scroll Button -->
-  <button id="scroll-button" class="scroll-button"><i class="fas fa-arrow-down"></i></button>
+  <button id="scroll-button" class="scroll-btn" aria-label="Scroll to next section"><i class="fas fa-arrow-down"></i></button>
 
   <script>
+    /* Scroll reveal */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* Scroll-to-section button */
     const scrollButton = document.getElementById('scroll-button');
     let scrollStage = 0;
     const sections = ['#video-section', '#gallery-section', '#button-section'];
 
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        scrollButton.classList.add('show');
-      } else {
-        scrollButton.classList.remove('show');
-      }
-    });
+      if (window.scrollY > 120) scrollButton.classList.add('show');
+      else scrollButton.classList.remove('show');
+    }, { passive: true });
 
     scrollButton.addEventListener('click', () => {
       if (scrollStage < sections.length) {
-        document.querySelector(sections[scrollStage]).scrollIntoView({ behavior: 'smooth' });
+        document.querySelector(sections[scrollStage])?.scrollIntoView({ behavior: 'smooth' });
         scrollStage++;
       } else {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         scrollStage = 0;
       }
-
-      scrollButton.innerHTML = scrollStage === sections.length ? '<i class="fas fa-arrow-up"></i>' : '<i class="fas fa-arrow-down"></i>';
+      scrollButton.innerHTML = scrollStage === sections.length
+        ? '<i class="fas fa-arrow-up"></i>'
+        : '<i class="fas fa-arrow-down"></i>';
     });
   </script>
 </body>
